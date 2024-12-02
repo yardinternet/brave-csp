@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Yard\\Csp\\Policies": "src/"
+            "Yard\\Csp\\Policies\\": "src/"
         }
     }
 }
