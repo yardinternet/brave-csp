@@ -10,7 +10,8 @@
         "sort-packages": true
     },
     "require": {
-        "php": ">=8.1"
+        "php": ">=8.1",
+        "spatie/laravel-csp": "*"
     },
     "autoload": {
         "psr-4": {
