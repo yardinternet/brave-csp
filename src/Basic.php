@@ -138,5 +138,25 @@ class Basic extends Policy
 				]
 			);
 		}
+
+		if (is_child_theme()) {
+			$parentThemeSiteUrl = $this->parentThemeSiteUrl();
+			$this->addDirective(Directive::STYLE, $parentThemeSiteUrl);
+			$this->addDirective(Directive::IMG, $parentThemeSiteUrl);
+		}
+	}
+
+	private function parentThemeSiteUrl(): string
+	{
+		$parentThemeSiteUrl = get_template_directory_uri();
+		$parsed = parse_url($parentThemeSiteUrl);
+
+		if ( !is_array($parsed)
+			|| !array_key_exists('scheme', $parsed)
+			|| !array_key_exists('host', $parsed)) {
+			return '';
+		}
+
+		return $parsed['scheme'] . '://' . $parsed['host'];
 	}
 }
