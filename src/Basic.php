@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Yard\Csp\Policies;
 
 use Spatie\Csp\Directive;
@@ -95,7 +97,20 @@ class Basic extends Policy
 
 			// Adobe Fonts
 			->addDirective(Directive::FONT, 'https://use.typekit.net')
-			->addDirective(Directive::STYLE, 'https://*.typekit.net');
+			->addDirective(Directive::STYLE, 'https://*.typekit.net')
+
+			// Google Translate
+			->addDirective(Directive::CONNECT, 'https://translate.googleapis.com')
+			->addDirective(Directive::CONNECT, 'https://translate-pa.googleapis.com')
+			->addDirective(Directive::SCRIPT, 'https://translate.googleapis.com')
+			->addDirective(Directive::SCRIPT, 'https://www.google.com')
+			->addDirective(Directive::STYLE, 'https://www.gstatic.com')
+			->addDirective(Directive::IMG, 'https://www.gstatic.com')
+			->addDirective(Directive::IMG, 'https://www.google.com')
+			->addDirective(Directive::IMG, 'https://fonts.gstatic.com')
+			->addDirective(Directive::IMG, 'https://translate.googleapis.com')
+			->addDirective(Directive::IMG, 'https://translate.google.com')
+			->addDirective(Directive::FRAME, 'https://translate.googleapis.com');
 
 		// Admin side requires unsafe-inline which doesn't work together with nonces or strict-dynamic
 		if (is_admin()) {
