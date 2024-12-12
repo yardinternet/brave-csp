@@ -110,7 +110,11 @@ class Basic extends Policy
 			->addDirective(Directive::IMG, 'https://fonts.gstatic.com')
 			->addDirective(Directive::IMG, 'https://translate.googleapis.com')
 			->addDirective(Directive::IMG, 'https://translate.google.com')
-			->addDirective(Directive::FRAME, 'https://translate.googleapis.com');
+			->addDirective(Directive::FRAME, 'https://translate.googleapis.com')
+
+			// Readspeaker
+            ->addDirective(Directive::CONNECT, 'https://cdn-eu.readspeaker.com')
+            ->addDirective(Directive::STYLE, 'https://cdn-eu.readspeaker.com');
 
 		// Admin side requires unsafe-inline which doesn't work together with nonces or strict-dynamic
 		if (is_admin()) {
