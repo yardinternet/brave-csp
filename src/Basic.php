@@ -100,21 +100,27 @@ class Basic extends Policy
 			->addDirective(Directive::STYLE, 'https://*.typekit.net')
 
 			// Google Translate
-			->addDirective(Directive::CONNECT, 'https://translate.googleapis.com')
-			->addDirective(Directive::CONNECT, 'https://translate-pa.googleapis.com')
-			->addDirective(Directive::SCRIPT, 'https://translate.googleapis.com')
-			->addDirective(Directive::SCRIPT, 'https://www.google.com')
+			->addDirective(Directive::CONNECT, [
+				'https://translate.googleapis.com',
+				'https://translate-pa.googleapis.com',
+			])
+			->addDirective(Directive::SCRIPT, [
+				'https://translate.googleapis.com',
+				'https://www.google.com',
+			])
 			->addDirective(Directive::STYLE, 'https://www.gstatic.com')
-			->addDirective(Directive::IMG, 'https://www.gstatic.com')
-			->addDirective(Directive::IMG, 'https://www.google.com')
-			->addDirective(Directive::IMG, 'https://fonts.gstatic.com')
-			->addDirective(Directive::IMG, 'https://translate.googleapis.com')
-			->addDirective(Directive::IMG, 'https://translate.google.com')
+			->addDirective(Directive::IMG, [
+				'https://www.gstatic.com',
+				'https://www.google.com',
+				'https://fonts.gstatic.com',
+				'https://translate.googleapis.com',
+				'https://translate.google.com',
+			])
 			->addDirective(Directive::FRAME, 'https://translate.googleapis.com')
 
-			// Readspeaker
-            ->addDirective(Directive::CONNECT, 'https://cdn-eu.readspeaker.com')
-            ->addDirective(Directive::STYLE, 'https://cdn-eu.readspeaker.com');
+			// ReadSpeaker
+			->addDirective(Directive::CONNECT, 'https://cdn-eu.readspeaker.com')
+			->addDirective(Directive::STYLE, 'https://cdn-eu.readspeaker.com');
 
 		// Admin side requires unsafe-inline which doesn't work together with nonces or strict-dynamic
 		if (is_admin()) {
