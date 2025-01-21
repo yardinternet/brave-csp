@@ -38,13 +38,13 @@ declare(strict_types=1);
 
 return [
 
-	/*
-	 * A policy will determine which CSP headers will be set. A valid CSP policy is
-	 * any class that extends `Spatie\Csp\Policies\Policy`
-	 */
-	'policy' => Yard\Csp\Policies\Basic::class,
-	
-	...
+    /*
+     * A policy will determine which CSP headers will be set. A valid CSP policy is
+     * any class that extends `Spatie\Csp\Policies\Policy`
+     */
+    'policy' => Yard\Csp\Policies\Basic::class,
+    
+    ...
 ];
 ```
 
@@ -61,12 +61,12 @@ use Yard\Csp\Policies\Basic;
 
 class Policy extends Basic
 {
-	public function configure()
-	{
-		parent::configure();
+    public function configure()
+    {
+        parent::configure();
 
-		// Add site specific csp directives below
-	}
+        // Add site specific csp directives below
+    }
 }
 ```
 
@@ -79,11 +79,11 @@ declare(strict_types=1);
 
 return [
 
-	/*
-	 * A policy will determine which CSP headers will be set. A valid CSP policy is
-	 * any class that extends `Spatie\Csp\Policies\Policy`
-	 */
-	'policy' => App\Csp\Policy::class,
+    /*
+     * A policy will determine which CSP headers will be set. A valid CSP policy is
+     * any class that extends `Spatie\Csp\Policies\Policy`
+     */
+    'policy' => App\Csp\Policy::class,
 
     ...
 ];
