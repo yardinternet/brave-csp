@@ -99,6 +99,10 @@ class Basic extends Policy
 			->addDirective(Directive::FONT, 'https://use.typekit.net')
 			->addDirective(Directive::STYLE, 'https://*.typekit.net')
 
+			
+			// ElasticSearch
+			->addDirective(Directive::CONNECT,env('WP_ENV') == 'production' ? 'https://es.elk01.yard.nl/' : 'https://es.test01.yard.nl')
+
 			// Google Translate
 			->addDirective(Directive::CONNECT, [
 				'https://translate.googleapis.com',
