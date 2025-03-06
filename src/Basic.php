@@ -122,8 +122,8 @@ class Basic extends Policy
 			->addDirective(Directive::FRAME, 'https://translate.googleapis.com')
 
 			// ReadSpeaker
-			->addDirective(Directive::CONNECT, 'https://cdn-eu.readspeaker.com')
-			->addDirective(Directive::STYLE, 'https://cdn-eu.readspeaker.com');
+			->addDirective(Directive::CONNECT, ['https://cdn-eu.readspeaker.com', 'https://app-eu.readspeaker.com'])
+			->addDirective(Directive::STYLE, ['https://cdn-eu.readspeaker.com', 'https://app-eu.readspeaker.com']);
 
 		// Admin side requires unsafe-inline which doesn't work together with nonces or strict-dynamic
 		if (is_admin()) {
