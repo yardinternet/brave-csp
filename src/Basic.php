@@ -12,7 +12,7 @@ use Spatie\Csp\Value;
 
 class Basic extends Policy
 {
-	public function configure()
+	public function configure(string $reportUri = '')
 	{
 		$this
 			->addDirective(Directive::BASE, Keyword::SELF)
@@ -42,6 +42,9 @@ class Basic extends Policy
 
 			// There's no filter for inline styles in WordPress
 			->addDirective(Directive::STYLE, Keyword::UNSAFE_INLINE)
+
+			// Pass CSP report URI
+			->addDirective(Directive::REPORT, $reportUri)
 
 			// Video embeds
 			->addDirective(
