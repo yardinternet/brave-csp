@@ -125,7 +125,7 @@ class Basic extends Policy
 			->addDirective(Directive::CONNECT, 'https://maps.googleapis.com')
 			->addDirective(Directive::IMG, [
 				'https://maps.googleapis.com',
-				'https://maps.gstatic.com'
+				'https://maps.gstatic.com',
 			])
 
 			// ReadSpeaker
