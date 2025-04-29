@@ -93,7 +93,7 @@ class Basic extends Policy
 
 			// Google Fonts
 			->addDirective(Directive::FONT, 'https://fonts.gstatic.com')
-			->addDirective(Directive::STYLE, 'https://fonts.googleapis.com/css2')
+			->addDirective(Directive::STYLE, 'https://fonts.googleapis.com')
 
 			// Adobe Fonts
 			->addDirective(Directive::FONT, 'https://use.typekit.net')
@@ -120,6 +120,13 @@ class Basic extends Policy
 				'https://translate.google.com',
 			])
 			->addDirective(Directive::FRAME, 'https://translate.googleapis.com')
+
+			// Google Maps
+			->addDirective(Directive::CONNECT, 'https://maps.googleapis.com')
+			->addDirective(Directive::IMG, [
+				'https://maps.googleapis.com',
+				'https://maps.gstatic.com'
+			])
 
 			// ReadSpeaker
 			->addDirective(Directive::CONNECT, ['https://cdn-eu.readspeaker.com', 'https://app-eu.readspeaker.com'])
