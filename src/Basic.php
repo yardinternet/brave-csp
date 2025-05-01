@@ -128,6 +128,10 @@ class Basic extends Policy
 				'https://maps.gstatic.com',
 			])
 
+			// Siteimprove
+			->addDirective(Directive::CONNECT, ['https://contentassistant.eu.siteimprove.com', 'https://id.eu.siteimprove.com'])
+			->addDirective(Directive::IMG, 'https://*.global.siteimproveanalytics.io')
+
 			// ReadSpeaker
 			->addDirective(Directive::CONNECT, ['https://cdn-eu.readspeaker.com', 'https://app-eu.readspeaker.com'])
 			->addDirective(Directive::STYLE, ['https://cdn-eu.readspeaker.com', 'https://app-eu.readspeaker.com']);
