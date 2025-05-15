@@ -33,7 +33,7 @@ class Basic extends Policy
 			->addDirective(Directive::FRAME, Keyword::SELF)
 
 			// Allow iframes for recaptcha
-			->addDirective(Directive::FRAME, [ 'https://www.google.com/recaptcha/', 'https://recaptcha.google.com/recaptcha/', ])
+			->addDirective(Directive::FRAME, ['https://www.google.com/recaptcha/', 'https://recaptcha.google.com/recaptcha/',])
 
 			// Allow embedded base64 encoded images and fonts
 			->addDirective(Directive::FONT, Scheme::DATA)
@@ -141,6 +141,9 @@ class Basic extends Policy
 			// Siteimprove
 			->addDirective(Directive::CONNECT, ['https://contentassistant.eu.siteimprove.com', 'https://id.eu.siteimprove.com'])
 			->addDirective(Directive::IMG, 'https://*.global.siteimproveanalytics.io')
+
+			// Used by PDC Leges & Verordeningen
+			->addDirective(Directive::STYLE, 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/smoothness/jquery-ui.css')
 
 			// ReadSpeaker
 			->addDirective(Directive::CONNECT, ['https://cdn-eu.readspeaker.com', 'https://app-eu.readspeaker.com'])
