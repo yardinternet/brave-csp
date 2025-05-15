@@ -82,12 +82,12 @@ class Basic extends Policy
 			)
 
 			// Monsido
-			->addDirective(Directive::IMG, 'https://tracking.monsido.com/')
+			->addDirective(Directive::IMG, 'https://tracking.monsido.com')
 			->addDirective(
 				Directive::CONNECT,
 				[
-					'https://heatmaps.monsido.com/',
-					'https://pagecorrect.monsido.com/',
+					'https://heatmaps.monsido.com',
+					'https://pagecorrect.monsido.com',
 				]
 			)
 
