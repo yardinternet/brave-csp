@@ -150,7 +150,10 @@ class Basic extends Policy
 
 			// ReadSpeaker
 			->addDirective(Directive::CONNECT, ['https://cdn-eu.readspeaker.com', 'https://app-eu.readspeaker.com'])
-			->addDirective(Directive::STYLE, ['https://cdn-eu.readspeaker.com', 'https://app-eu.readspeaker.com']);
+			->addDirective(Directive::STYLE, ['https://cdn-eu.readspeaker.com', 'https://app-eu.readspeaker.com'])
+
+			// Used by Filebird
+			->addDirective(Directive::CONNECT, ['https://preview.ninjateam.org']);
 
 		// Admin side requires unsafe-inline which doesn't work together with nonces or strict-dynamic
 		if (is_admin()) {
