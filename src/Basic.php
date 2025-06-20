@@ -154,6 +154,22 @@ class Basic extends Policy
 			->addDirective(Directive::FORM_ACTION, ['https://app-eu.readspeaker.com'])
 			->addDirective(Directive::FRAME, ['https://app-eu.readspeaker.com'])
 
+			// A11y Toolbar: Open Dyslexic font
+			->addDirective(
+				Directive::STYLE,
+				[
+					'https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic@master/woff/OpenDyslexic-Regular.woff',
+					'https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic@master/woff/OpenDyslexic-Bold.woff',
+				]
+			)
+			->addDirective(
+				Directive::FONT,
+				[
+					'https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic@master/woff/OpenDyslexic-Regular.woff',
+					'https://cdn.jsdelivr.net/gh/antijingoist/open-dyslexic@master/woff/OpenDyslexic-Bold.woff',
+				]
+			)
+
 			// Used by Filebird
 			->addDirective(Directive::CONNECT, ['https://preview.ninjateam.org']);
 
