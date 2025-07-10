@@ -102,11 +102,19 @@ class Basic extends Policy
 					'https://kit.fontawesome.com',
 				]
 			)
+			->addDirective(
+				Directive::STYLE,
+				[
+					'https://ka-p.fontawesome.com',
+					'https://kit.fontawesome.com',
+				]
+			)
 			->addDirective(Directive::FONT, 'https://ka-p.fontawesome.com')
 
 			// Google Fonts
 			->addDirective(Directive::FONT, 'https://fonts.gstatic.com')
 			->addDirective(Directive::STYLE, 'https://fonts.googleapis.com')
+			->addDirective(Directive::CONNECT, 'https://fonts.googleapis.com')
 
 			// Adobe Fonts
 			->addDirective(Directive::FONT, 'https://use.typekit.net')
