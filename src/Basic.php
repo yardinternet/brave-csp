@@ -197,5 +197,18 @@ class Basic extends Policy
 				]
 			);
 		}
+
+		// Only on development environments
+		if (defined('WP_ENV') && WP_ENV === 'development') {
+			$this
+				// Needed for react-refresh and other React frontend modules
+				->addDirective(Directive::SCRIPT, Keyword::UNSAFE_EVAL)
+
+				// Needed for Vite development server
+				->addDirective(Directive::CONNECT, [ 'http://localhost:*', 'https://localhost:*', 'ws://localhost:*'])
+				->addDirective(Directive::SCRIPT, [ 'http://localhost:*', 'https://localhost:*', 'ws://localhost:*'])
+				->addDirective(Directive::IMG, [ 'http://localhost:*', 'https://localhost:*', 'ws://localhost:*'])
+				->addDirective(Directive::STYLE, [ 'http://localhost:*', 'https://localhost:*', 'ws://localhost:*']);
+		}
 	}
 }
