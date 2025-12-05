@@ -2,7 +2,7 @@
 	"name": "yard/brave-csp",
 	"type": "package",
 	"description": "Content Security Policy for Brave sites",
-	"license": "MIT",
+	"license": "EUPL-1.2",
 	"config": {
 		"platform": {
 			"php": "8.1"

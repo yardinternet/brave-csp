@@ -2,20 +2,9 @@
 
 ## Installation
 
-1. Add the following to the `repositories` section of your `composer.json`:
-
-    ```json
-    {
-      "type": "vcs",
-      "url": "git@github.com:yardinternet/brave-csp.git"
-    }
-    ```
-
-2. Install this package with composer:
-
-    ```sh
-    composer require yard/brave-csp
-    ```
+```sh
+composer require yard/brave-csp
+```
 
 ## Features
 
@@ -87,3 +76,8 @@ return [
 
     ...
 ];
+```
+
+## About us
+
+[![banner](https://raw.githubusercontent.com/yardinternet/.github/refs/heads/main/profile/assets/small-banner-github.svg)](https://www.yard.nl/werken-bij/)
