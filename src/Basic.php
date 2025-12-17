@@ -123,8 +123,10 @@ class Basic extends Policy
 
 			// ElasticSearch
 			->addDirective(Directive::CONNECT, env('WP_ENV') === 'production' ? 'https://es.elk01.yard.nl/' : 'https://es.test01.yard.nl')
-			->addDirective(Directive::CONNECT,
-				env('WP_ENV') === 'production' ? 'https://elasticsearch-yard.app.owc.shockapp.io' : 'https://elasticsearch-yard-staging.app.owc.shockapp.io')
+			->addDirective(
+				Directive::CONNECT,
+				env('WP_ENV') === 'production' ? 'https://elasticsearch-yard.app.owc.shockapp.io' : 'https://elasticsearch-yard-staging.app.owc.shockapp.io'
+			)
 
 			// Google Translate
 			->addDirective(Directive::CONNECT, [
@@ -132,7 +134,6 @@ class Basic extends Policy
 				'https://translate-pa.googleapis.com',
 			])
 			->addDirective(Directive::SCRIPT, [
-
 				'https://translate.googleapis.com',
 
 				'https://www.google.com',
