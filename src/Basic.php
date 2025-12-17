@@ -123,7 +123,8 @@ class Basic extends Policy
 
 			// ElasticSearch
 			->addDirective(Directive::CONNECT, env('WP_ENV') === 'production' ? 'https://es.elk01.yard.nl/' : 'https://es.test01.yard.nl')
-			->addDirective(Directive::CONNECT, env('WP_ENV') === 'production' ? 'https://elasticsearch-yard.app.owc.shockapp.io' : 'https://elasticsearch-yard-staging.app.owc.shockapp.io')
+			->addDirective(Directive::CONNECT,
+				env('WP_ENV') === 'production' ? 'https://elasticsearch-yard.app.owc.shockapp.io' : 'https://elasticsearch-yard-staging.app.owc.shockapp.io')
 
 			// Google Translate
 			->addDirective(Directive::CONNECT, [
@@ -131,7 +132,9 @@ class Basic extends Policy
 				'https://translate-pa.googleapis.com',
 			])
 			->addDirective(Directive::SCRIPT, [
+
 				'https://translate.googleapis.com',
+
 				'https://www.google.com',
 			])
 			->addDirective(Directive::STYLE, 'https://www.gstatic.com')
@@ -207,10 +210,10 @@ class Basic extends Policy
 				->addDirective(Directive::SCRIPT, Keyword::UNSAFE_EVAL)
 
 				// Needed for Vite development server
-				->addDirective(Directive::CONNECT, ['http://localhost:*', 'https://localhost:*', 'ws://localhost:*'])
-				->addDirective(Directive::SCRIPT, ['http://localhost:*', 'https://localhost:*', 'ws://localhost:*'])
-				->addDirective(Directive::IMG, ['http://localhost:*', 'https://localhost:*', 'ws://localhost:*'])
-				->addDirective(Directive::STYLE, ['http://localhost:*', 'https://localhost:*', 'ws://localhost:*']);
+				->addDirective(Directive::CONNECT, [ 'http://localhost:*', 'https://localhost:*', 'ws://localhost:*'])
+				->addDirective(Directive::SCRIPT, [ 'http://localhost:*', 'https://localhost:*', 'ws://localhost:*'])
+				->addDirective(Directive::IMG, [ 'http://localhost:*', 'https://localhost:*', 'ws://localhost:*'])
+				->addDirective(Directive::STYLE, [ 'http://localhost:*', 'https://localhost:*', 'ws://localhost:*']);
 
 			if (env('LANDO_REMOTE_ASSETS_URL')) {
 				$this->addDirective(Directive::IMG, env('LANDO_REMOTE_ASSETS_URL'));
