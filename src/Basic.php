@@ -144,8 +144,6 @@ class Basic extends Policy
 			])
 			->addDirective(Directive::FRAME, 'https://translate.googleapis.com')
 
-
-
 			// Google Maps
 			->addDirective(Directive::CONNECT, 'https://maps.googleapis.com')
 			->addDirective(Directive::IMG, [
