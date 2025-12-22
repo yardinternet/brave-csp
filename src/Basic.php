@@ -95,6 +95,30 @@ class Basic extends Policy
 				]
 			)
 
+			// Mijn virtuele gemeente assistent
+			->addDirective(
+				Directive::CONNECT,
+				[
+					'wss://virtuele-gemeente-assistent.nl/',
+					'https://virtuele-gemeente-assistent.nl/',
+					'https://mijn.virtuele-gemeente-assistent.nl/',
+				]
+			)
+			->addDirective(
+				Directive::STYLE,
+				[
+					'https://virtuele-gemeente-assistent.nl/',
+					'https://mijn.virtuele-gemeente-assistent.nl/',
+				]
+			)
+			->addDirective(
+				Directive::IMG,
+				[
+					'https://virtuele-gemeente-assistent.nl/',
+					'https://mijn.virtuele-gemeente-assistent.nl/',
+				]
+			)
+
 			// Font Awesome
 			->addDirective(
 				Directive::CONNECT,
@@ -123,7 +147,10 @@ class Basic extends Policy
 
 			// ElasticSearch
 			->addDirective(Directive::CONNECT, env('WP_ENV') === 'production' ? 'https://es.elk01.yard.nl/' : 'https://es.test01.yard.nl')
-			->addDirective(Directive::CONNECT, env('WP_ENV') === 'production' ? 'https://elasticsearch-yard.app.owc.shockapp.io' : 'https://elasticsearch-yard-staging.app.owc.shockapp.io')
+			->addDirective(
+				Directive::CONNECT,
+				env('WP_ENV') === 'production' ? 'https://elasticsearch-yard.app.owc.shockapp.io' : 'https://elasticsearch-yard-staging.app.owc.shockapp.io'
+			)
 
 			// Google Translate
 			->addDirective(Directive::CONNECT, [
