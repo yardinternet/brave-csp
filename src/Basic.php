@@ -82,8 +82,8 @@ class Basic extends Policy
 			)
 
 			// Clarity
-			->addDirective(Directive::CONNECT, 'https://*.clarity.ms')
-			->addDirective(Directive::IMG, 'https://*.clarity.ms')
+			->addDirective(Directive::CONNECT, ['https://*.clarity.ms', 'https://c.bing.com'])
+			->addDirective(Directive::IMG, ['https://*.clarity.ms', 'https://c.bing.com'])
 
 			// Monsido
 			->addDirective(Directive::IMG, 'https://tracking.monsido.com')
