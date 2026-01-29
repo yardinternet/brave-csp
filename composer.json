@@ -5,12 +5,12 @@
 	"license": "EUPL-1.2",
 	"config": {
 		"platform": {
-			"php": "8.1"
+			"php": "8.2"
 		},
 		"sort-packages": true
 	},
 	"require": {
-		"php": ">=8.1",
+		"php": ">=8.2",
 		"spatie/laravel-csp": "^2.0"
 	},
 	"require-dev": {
