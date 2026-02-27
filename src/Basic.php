@@ -186,7 +186,7 @@ class Basic extends Policy
 			->addDirective(Directive::STYLE, 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/smoothness/jquery-ui.css')
 
 			// ReadSpeaker
-			->addDirective(Directive::CONNECT, ['https://cdn-eu.readspeaker.com', 'https://app-eu.readspeaker.com', 'https://vttts-eu.readspeaker.com'])
+			->addDirective(Directive::CONNECT, ['https://cdn-eu.readspeaker.com', 'https://app-eu.readspeaker.com', 'https://vttts-eu.readspeaker.com', 'https://media-eu.readspeaker.com'])
 			->addDirective(Directive::STYLE, ['https://cdn-eu.readspeaker.com', 'https://app-eu.readspeaker.com', 'https://media-eu.readspeaker.com'])
 			->addDirective(Directive::FORM_ACTION, ['https://app-eu.readspeaker.com'])
 			->addDirective(Directive::FRAME, ['https://app-eu.readspeaker.com', 'https://media-eu.readspeaker.com'])
