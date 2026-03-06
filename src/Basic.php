@@ -209,7 +209,13 @@ class Basic extends Policy
 			)
 
 			// Used by Filebird
-			->addDirective(Directive::CONNECT, ['https://preview.ninjateam.org']);
+			->addDirective(Directive::CONNECT, ['https://preview.ninjateam.org'])
+
+			// Timeblockr
+			->addDirective(Directive::STYLE, ['https://*.timeblockr.com', 'https://*.timeblockr.cloud', 'https://*.api.timeblockr.cloud'])
+			->addDirective(Directive::FONT, ['https://*.timeblockr.com', 'https://*.timeblockr.cloud', 'https://*.api.timeblockr.cloud'])
+			->addDirective(Directive::CONNECT, ['https://*.timeblockr.com', 'https://*.timeblockr.cloud', 'https://*.api.timeblockr.cloud'])
+			->addDirective(Directive::IMG, ['https://*.timeblockr.com', 'https://*.timeblockr.cloud', 'https://*.api.timeblockr.cloud']);
 
 		// Admin side requires unsafe-inline which doesn't work together with nonces or strict-dynamic
 		if (is_admin()) {
