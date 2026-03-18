@@ -244,7 +244,8 @@ class Basic extends Policy
 				->addDirective(Directive::CONNECT, ['http://localhost:*', 'https://localhost:*', 'ws://localhost:*'])
 				->addDirective(Directive::SCRIPT, ['http://localhost:*', 'https://localhost:*', 'ws://localhost:*'])
 				->addDirective(Directive::IMG, ['http://localhost:*', 'https://localhost:*', 'ws://localhost:*'])
-				->addDirective(Directive::STYLE, ['http://localhost:*', 'https://localhost:*', 'ws://localhost:*']);
+				->addDirective(Directive::STYLE, ['http://localhost:*', 'https://localhost:*', 'ws://localhost:*'])
+				->addDirective(Directive::FONT, ['http://localhost:*', 'https://localhost:*', 'ws://localhost:*']);
 
 			if (env('LANDO_REMOTE_ASSETS_URL')) {
 				$this->addDirective(Directive::IMG, env('LANDO_REMOTE_ASSETS_URL'));
