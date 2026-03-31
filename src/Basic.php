@@ -192,6 +192,9 @@ class Basic extends Policy
 			->addDirective(Directive::FRAME, ['https://app-eu.readspeaker.com', 'https://media-eu.readspeaker.com'])
 			->addDirective(Directive::MEDIA, ['https://cdn-eu.readspeaker.com'])
 
+			// Worldline payment provider/iDeal
+			->addDirective(Directive::FORM_ACTION, ['https://payment.direct.worldline-solutions.com', 'https://pay.ideal.nl'])
+
 			// A11y Toolbar: Open Dyslexic font
 			->addDirective(
 				Directive::STYLE,
