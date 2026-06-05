@@ -217,7 +217,7 @@ class Basic extends Policy
 			// Timeblockr
 			->addDirective(Directive::STYLE, ['https://*.timeblockr.com', 'https://*.timeblockr.cloud', 'https://*.api.timeblockr.cloud'])
 			->addDirective(Directive::FONT, ['https://*.timeblockr.com', 'https://*.timeblockr.cloud', 'https://*.api.timeblockr.cloud'])
-			->addDirective(Directive::CONNECT, ['https://*.timeblockr.com', 'https://*.timeblockr.cloud', 'https://*.api.timeblockr.cloud'])
+			->addDirective(Directive::CONNECT, ['https://*.timeblockr.com', 'https://*.timeblockr.cloud', 'https://*.api.timeblockr.cloud', 'wss://*.timeblockr.cloud'])
 			->addDirective(Directive::IMG, ['https://*.timeblockr.com', 'https://*.timeblockr.cloud', 'https://*.api.timeblockr.cloud'])
 
 			// OpenKaarten plugins
