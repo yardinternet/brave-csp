@@ -222,7 +222,34 @@ class Basic extends Policy
 
 			// OpenKaarten plugins
 			->addDirective(Directive::IMG, 'https://*.tile.osm.org')
-			->addDirective(Directive::CONNECT, 'https://nominatim.openstreetmap.org');
+			->addDirective(Directive::CONNECT, 'https://nominatim.openstreetmap.org')
+
+			// PDOK / Leaflet maps (yard/wp-pdok) — keep versions in sync with that package's src/Leaflet/Assets.php
+			->addDirective(
+				Directive::CONNECT,
+				[
+					'https://api.pdok.nl',
+					'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js',
+					'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js.map',
+					'https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js',
+					'https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js.map',
+				]
+			)
+			->addDirective(
+				Directive::STYLE,
+				[
+					'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
+					'https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css',
+					'https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css',
+				]
+			)
+			->addDirective(
+				Directive::IMG,
+				[
+					'https://service.pdok.nl',
+					'https://unpkg.com/leaflet@1.9.4/dist/images/',
+				]
+			);
 
 		// Admin side requires unsafe-inline which doesn't work together with nonces or strict-dynamic
 		if (is_admin()) {
