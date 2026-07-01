@@ -269,7 +269,7 @@ class Basic extends Policy
 		}
 
 		// Only on development environments
-		if (defined('WP_ENV') && WP_ENV === 'development') {
+		if (defined('WP_ENV') && in_array(WP_ENV, ['development', 'local'], true)) {
 			$this
 				// Needed for react-refresh and other React frontend modules
 				->addDirective(Directive::SCRIPT, Keyword::UNSAFE_EVAL)
