@@ -249,6 +249,21 @@ class Basic extends Policy
 					'https://service.pdok.nl',
 					'https://unpkg.com/leaflet@1.9.4/dist/images/',
 				]
+			)
+
+			// Tolkie
+			->addDirective(Directive::SCRIPT, 'https://app.tolkie.nl')
+			->addDirective(Directive::STYLE, 'https://app.tolkie.nl')
+			->addDirective(Directive::FONT, 'https://app.tolkie.nl')
+			->addDirective(Directive::FRAME, [
+					'https://app.tolkie.nl',
+					'api.tolkie.nl'
+				]
+			)
+			->addDirective(Directive::CONNECT, [
+					'https://app.tolkie.nl',
+					'api.tolkie.nl'
+				]
 			);
 
 		// Admin side requires unsafe-inline which doesn't work together with nonces or strict-dynamic
