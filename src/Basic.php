@@ -255,14 +255,18 @@ class Basic extends Policy
 			->addDirective(Directive::SCRIPT, 'https://app.tolkie.nl')
 			->addDirective(Directive::STYLE, 'https://app.tolkie.nl')
 			->addDirective(Directive::FONT, 'https://app.tolkie.nl')
-			->addDirective(Directive::FRAME, [
+			->addDirective(
+				Directive::FRAME,
+				[
 					'https://app.tolkie.nl',
-					'api.tolkie.nl'
+					'api.tolkie.nl',
 				]
 			)
-			->addDirective(Directive::CONNECT, [
+			->addDirective(
+				Directive::CONNECT,
+				[
 					'https://app.tolkie.nl',
-					'api.tolkie.nl'
+					'api.tolkie.nl',
 				]
 			);
 
