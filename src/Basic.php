@@ -259,14 +259,14 @@ class Basic extends Policy
 				Directive::FRAME,
 				[
 					'https://app.tolkie.nl',
-					'api.tolkie.nl',
+					'https://api.tolkie.nl',
 				]
 			)
 			->addDirective(
 				Directive::CONNECT,
 				[
 					'https://app.tolkie.nl',
-					'api.tolkie.nl',
+					'https://api.tolkie.nl',
 				]
 			);
 
