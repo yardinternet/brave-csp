@@ -268,7 +268,13 @@ class Basic extends Policy
 					'https://app.tolkie.nl',
 					'https://api.tolkie.nl',
 				]
-			);
+			)
+
+			// CookieBot
+			->addDirective(Directive::FRAME, ['https://consentcdn.cookiebot.com', 'https://consentcdn.cookiebot.eu'])
+			->addDirective(Directive::CONNECT, ['https://consentcdn.cookiebot.com', 'https://consentcdn.cookiebot.eu'])
+			->addDirective(Directive::IMG, ['https://imgsct.cookiebot.com', 'https://imgsct.cookiebot.eu']);
+
 
 		// Admin side requires unsafe-inline which doesn't work together with nonces or strict-dynamic
 		if (is_admin()) {
