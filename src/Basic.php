@@ -43,6 +43,9 @@ class Basic extends Policy
 			// There's no filter for inline styles in WordPress
 			->addDirective(Directive::STYLE, Keyword::UNSAFE_INLINE)
 
+			// Soundcloud embeds
+			->addDirective(Directive::FRAME, 'https://w.soundcloud.com')
+
 			// Video embeds
 			->addDirective(
 				Directive::FRAME,
